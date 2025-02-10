@@ -4,6 +4,9 @@ This project is a SQL-powered Chat Assistant built with Flask, LangChain, llama3
 
 ![image](https://github.com/user-attachments/assets/3cc0f0ce-129f-4ee5-a323-79e6fa4504ab)
 
+![image](https://github.com/user-attachments/assets/2fc32b38-ddd5-4b9c-af7e-7fcc8dc2f72e)
+
+
 
 ### How the Assistant Works
 The assistant works by processing user questions in the following steps:
