@@ -2,6 +2,8 @@
 
 This project is a SQL-powered Chat Assistant built with Flask, LangChain, llama3-8b from Groq, and a state-driven execution flow. The assistant accepts natural language questions from users, formulates SQL queries to retrieve data from a database, executes those queries, and generates a meaningful final response.
 
+The Chat Assistant can be accessed at: https://chat-with-your-database.onrender.com/
+
 ![image](https://github.com/user-attachments/assets/3cc0f0ce-129f-4ee5-a323-79e6fa4504ab)
 
 
