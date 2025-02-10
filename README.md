@@ -20,5 +20,25 @@ Based on the query result, the assistant generates a concise answer using the LL
 #### 5. Response:
 The assistant returns the full response and final answer to the user.
 
+### Setup and Running Locally
+#### Prerequisites
+  Python 3.8 or higher
+  A valid Groq API key
+  Database URI (for connecting to your SQL database)
+
+#### Installation
+##### 1. Clone the repository:
+        git clone <repository-url>
+        cd <project-directory>
+        
+##### 2. Install the dependencies:
+        pip install -r requirements.txt
+
+##### 3. Set environment variables:
+        DATABASE_URI="sqlite:///path-to-your-db.db"
+        GROQ_API_KEY="your-groq-api-key"
+#####  4. Run the Flask server:
+        python app.py
+
 
 
