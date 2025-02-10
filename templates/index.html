@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Chatbot</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+
+<body>
+    <h1>Chat with Your Database</h1>
+
+    <div id="chat-container">
+        <!-- messages will appear here -->
+    </div>
+
+    <div id="chat-input-container">
+        <input type="text" id="user-question" placeholder="Ask anything...">
+        <button id="submit-button">Go</button>
+    </div>
+
+    <script>
+        const submitButton = document.getElementById('submit-button');
+        const chatContainer = document.getElementById('chat-container');
+        const userQuestionInput = document.getElementById('user-question');
+
+        submitButton.addEventListener('click', async () => {
+            const question = userQuestionInput.value.trim();
+
+            if (!question) {
+                alert("Please enter a question!");
+                return;
+            }
+
+            chatContainer.innerHTML += `<div><strong>You:</strong> ${question}</div>`;
+            userQuestionInput.value = '';
+
+            try {
+                const response = await fetch('/ask', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ question })
+                });
+
+                const data = await response.json();
+                const finalAnswer = data.final_answer || "I don't have an answer for that.";
+
+                chatContainer.innerHTML += `<div><strong>Bot:</strong> ${finalAnswer}</div>`;
+            } catch (err) {
+                chatContainer.innerHTML += `<div><strong>Bot:</strong> Something went wrong. Try again later.</div>`;
+            }
+
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        });
+    </script>
+</body>
+
+</html>

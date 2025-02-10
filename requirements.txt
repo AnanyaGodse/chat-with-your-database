@@ -1,0 +1,6 @@
+langchain-community
+langchainhub
+langgraph
+python-dotenv
+Flask
+langchain-groq
