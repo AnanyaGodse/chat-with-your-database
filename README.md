@@ -28,8 +28,8 @@ The assistant returns the full response and final answer to the user.
 
 #### Installation
 ##### 1. Clone the repository:
-        git clone <repository-url>
-        cd <project-directory>
+        git clone https://github.com/AnanyaGodse/chat-with-your-database.git
+        cd db-chatbot
         
 ##### 2. Install the dependencies:
         pip install -r requirements.txt
